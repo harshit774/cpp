@@ -19,11 +19,7 @@ ll t;cin>>t;
 while(t--)
 {
     ll p,a,b,c;cin>>p>>a>>b>>c;
-    ll x = ceil(p/a)*a;
-    ll y = ceil(p/b)*b;
-    ll z = ceil(p/c)*c;
-    ll ans = min(min(x,y),z) - p;
-    cout<< ans <<'\n';
+    cout<< min({((p+a-1)/a)*a,((p+b-1)/b)*b,((p+c-1)/c)*c})-p <<'\n';
 }
 return 0;
 } //Code Contributed by Harshit Varshney
