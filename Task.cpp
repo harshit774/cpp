@@ -2,37 +2,31 @@
 #include<iostream>
 #include<algorithm>
 #include<queue>
+#define ll long long int
+#define pb push_back
+#define fo(i,n) for(int i=0;i<n;i++)
+#define ff(i,n) for(int i=n-1;i>=0;i--)
+#define fff(i,a,b) for(int i = a; i <= b ; i++)
+#define pb push_back
+#define YES cout<< 'YES' << endl 
+#define NO cout<< 'NO' << endl 
 using namespace std;
-typedef long long int ll;
-//const int N = 2e3 + 100;
+const int E = 2e3 + 100;
 const int mod = 1e9 + 7;
 
-int main()
+int32_t main()
 {
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
-ll t=1;//cin>>t;
+ll t;cin>>t;
 while(t--)
 {
-    ll N = 300000;
-    ll pre[N+5];
-    pre[0] =  0;
-    pre[1] = 2;
-    for(ll i=2;i<=N;++i)
-    {
-        ll a = sqrt(i);
-        ll p = i*a + (i+1)/2 ;
-        pre[i] = pre[i-1] + p; 
-        //cout<<p<<' ';
-    }  
-    ll Q;cin>>Q;
-    while(Q--)
-    {
-        ll l,r;cin>>l>>r;
-        ll a = lower_bound(pre,pre+N,l) - pre;
-        ll b = lower_bound(pre,pre+N,r) - pre;
-        cout<< abs(a-b) + 1 <<'\n';
-    }
+    ll n;cin>>n;
+    if(n%4==1) cout<< 1 << " " << 1 <<'\n';
+    else if(n%4==2) cout<< 2 << " " << n << " " << 1 <<'\n';
+    else if(n%4==3) cout<< 0 <<'\n';
+    else if(n%4==0) cout<< 1 << " " << n <<'\n';
+
 }
 return 0;
-}//Code Contributed by Harshit Varshney
+} //Code Contributed by Harshit Varshney
