@@ -21,11 +21,26 @@ cin.tie(NULL);
 ll t;cin>>t;
 while(t--)
 {
-    ll n;cin>>n;
-    if(n%4==1) cout<< 1 << " " << 1 <<'\n';
-    else if(n%4==2) cout<< 2 << " " << n << " " << 1 <<'\n';
-    else if(n%4==3) cout<< 0 <<'\n';
-    else if(n%4==0) cout<< 1 << " " << n <<'\n';
+    ll L,R;cin>>L>>R;
+    ll x=0,y;
+    ll count = 0;
+    for(ll i=sqrt(L);i<=(R/2)+1;i++)
+    {
+        if(i*i>=L)
+        {
+            count = count + sqrt(i*i-L)+1;
+            if(i*i>=R)
+            {
+                x = sqrt(i*i-R);
+                if(x*x==i*i-R)
+                {
+                    count = count - x;
+                }
+                else count = count - x-1;
+            }
+        }
+    }
+    cout<< count <<'\n';
 
 }
 return 0;
