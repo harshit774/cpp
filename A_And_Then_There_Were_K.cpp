@@ -22,20 +22,27 @@ ll t;cin>>t;
 while(t--)
 {
     ll n;cin>>n;
-    if(n==1) {
-        cout<< 0 <<'\n';
-        continue;
+    ll a = 1;
+    //ll b = a;
+    while(a<=n)
+    {
+        a*=2;
     }
-    int x = 1;
-    while(x<n) x*=2;
-    x/=2;
-    int p = n;
-    while(n%2==0) n/=2;
-    if(n==1) {
-        cout<< p-1 <<'\n' ;
-        continue;
-    }
-    cout<< x-(n>1?1:0) <<'\n';
+    cout<< (a/2)-1 <<'\n';
+    // if(n==1) {
+    //     cout<< 0 <<'\n';
+    //     continue;
+    // }
+    // int x = 1;
+    // while(x<n) x*=2;
+    // x/=2;
+    // int p = n;
+    // while(n%2==0) n/=2;
+    // if(n==1) {
+    //     cout<< p-1 <<'\n' ;
+    //     continue;
+    // }
+    // cout<< x-(n>1?1:0) <<'\n';
     
     
 }

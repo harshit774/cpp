@@ -25,21 +25,22 @@ while(t--)
     ll count = 0;
     fff(i,0,n)
     {
-        if(s[i]=='1')
+        if(s[i]=='0')
         {
             count++;
         }
     }
-    if(count==n) cout<< "DRAW" <<'\n';
-    // else if(count%4==1 or count%4==2) cout<< "BOB" <<'\n';
-    // else if(count%4==3) cout<< "ALICE" <<'\n';
-    count = n - count;
-    if(count&1)
-    {
-        if(count==1) cout<< "BOB" <<'\n';
-        else cout<< "ALICE" <<'\n';
-    }
+    // if(count==n) cout<< "DRAW" <<'\n';
+    // count = n - count;
+    // if(count&1)
+    // {
+    //     if(count==1) cout<< "BOB" <<'\n';
+    //     else cout<< "ALICE" <<'\n';
+    // }
+    // else cout<< "BOB" <<'\n';
+    if((count&1) and count!=1) cout<< "ALICE" <<'\n';
     else cout<< "BOB" <<'\n';
+
 }
 return 0;
 } //Code Contributed by Harshit Varshney
