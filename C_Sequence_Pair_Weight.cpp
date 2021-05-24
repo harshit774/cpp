@@ -16,25 +16,25 @@ const int mod = 1e9 + 7;
 
 ll helper(vector<ll> &arr,ll N){
     ll n = arr.size();
-    vector<ll> pref(n,0);
-    for(int i=0;i<n;i++){
-        pref[i]=N+1-arr[i];
- }
-
-
-    for(int i=n-2;i>=0;i--){
-        pref[i]=pref[i]+pref[i+1];
+    vector<ll> prefix(n,0);
+    fo(i,n){
+        prefix[i] = N+1 - arr[i];
+    }
+    ff(i,n)
+    {
+        prefix[i] = prefix[i] + prefix[i+1];
     }
 
-
-    ll ret = 0;
-    for(int i=0;i<n;i++){
-        if(i+1<n) ret+=pref[i+1]*(arr[i]);
+    ll res = 0;
+    fo(i,n)
+    {
+        if(i+1<n) 
+        {
+            res+=prefix[i+1]*(arr[i]);
+        }
     }
-    return ret;
+    return res;
 }
-
-
 
 int32_t main()
 {
