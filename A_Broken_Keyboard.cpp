@@ -19,25 +19,19 @@ cin.tie(NULL);
 ll t;cin>>t;
 while(t--)
 {
-    ll n;cin>>n;
-    ll count = 0;
-    ll a[n];
-    //ll sum = 0;
-    fo(i,0,n)
+    string s;cin>>s;
+    set<char> st;
+    fo(i,0,s.size())
     {
-        cin>>a[i];
-        //sum = sum + a[i];
+        if(s[i]!=s[i+1]) st.insert(s[i]);
+        else i++;
     }
-    sort(a,a+n);
-    ll mn = a[0];
-    //ll mn = sum/n;
-    fo(i,0,n){
-        if(a[i]>mn)
-        {
-            count++;
-        }
+    for(auto it:st)
+    {
+        cout<< it;
+        //cout<<'\n';
     }
-    cout<< count <<'\n';
+    cout<<'\n';
 }
 return 0;
 } //Code Contributed by Harshit Varshney
