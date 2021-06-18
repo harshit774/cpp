@@ -53,7 +53,7 @@ while(t--)
             }
             cout<<endl;
         }
-        return;
+        continue;
     }
     while(!q.empty()){
         auto elem = q.front();
