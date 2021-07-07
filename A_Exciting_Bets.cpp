@@ -19,20 +19,18 @@ cin.tie(NULL);
 ll t;cin>>t;
 while(t--)
 {
-    ll n;cin>>n;
-    ll m = 2*n;
-    ll count1 = 0 , count2 = 0;
-    ll a[m];
-    fo(i,0,m){
-        cin>>a[i];
-        if(a[i]&1) count2++;
-        else count1++;
+    ll a,b;cin>>a>>b;
+    if(a==b) cout<< 0 << " " << 0 <<'\n';
+    else if(a>b){
+        ll ans = a-b;
+        ll sol = min(b%ans,ans-b%ans);
+        cout<< ans << " " << sol <<'\n';
     }
-    if(count1==count2){
-        cout<< "Yes" <<'\n'; 
-        //continue;
+    else {
+        ll ans = b-a;
+        ll sol = min(a%ans,ans-a%ans);
+        cout<< ans << " " << sol <<'\n';
     }
-    else cout<< "No" <<'\n';
 }
 return 0;
 } //Code Contributed by Harshit Varshney

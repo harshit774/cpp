@@ -12,6 +12,18 @@
 using namespace std;
 const int E = 2e3 + 100;
 const int mod = 1e9 + 7;
+
+ll helper(ll n,ll a[]){
+    ll sum = 0;
+    fo(i,0,n){
+        sum += a[i];
+    }
+    ll p = (sum/n)*n;
+    ll q = sum - p;
+    ll ans = (n-q)*q;
+    return ans;
+}
+
 int32_t main()
 {
 ios_base::sync_with_stdio(false);
@@ -20,19 +32,10 @@ ll t;cin>>t;
 while(t--)
 {
     ll n;cin>>n;
-    ll m = 2*n;
-    ll count1 = 0 , count2 = 0;
-    ll a[m];
-    fo(i,0,m){
-        cin>>a[i];
-        if(a[i]&1) count2++;
-        else count1++;
-    }
-    if(count1==count2){
-        cout<< "Yes" <<'\n'; 
-        //continue;
-    }
-    else cout<< "No" <<'\n';
+    ll a[n];
+    fo(i,0,n) cin>>a[i];
+    ll ans = helper(n,a);
+    cout<< ans <<'\n';
 }
 return 0;
 } //Code Contributed by Harshit Varshney
