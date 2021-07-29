@@ -1,0 +1,1 @@
+{"name":"Local: dparray","url":"c:\\Users\\Harshit Varshney\\Desktop\\cpp\\dparray.cpp","tests":[{"id":1627284182009,"input":"7\n1 2 3 6 3 6 1","output":"1 3 6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Harshit Varshney\\Desktop\\cpp\\dparray.cpp","group":"local","local":true}
