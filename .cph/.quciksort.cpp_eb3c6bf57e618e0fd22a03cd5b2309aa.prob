@@ -1,0 +1,1 @@
+{"name":"Local: quciksort","url":"c:\\Users\\Harshit Varshney\\Desktop\\cpp\\quciksort.cpp","tests":[{"id":1628147382752,"input":"6\n2 5 4 8 7 9","output":"2 4 5 7 8 9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Harshit Varshney\\Desktop\\cpp\\quciksort.cpp","group":"local","local":true}
