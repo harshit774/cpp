@@ -6,7 +6,7 @@ int main()
 {
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
-ll t;cin>>t;
+ll t=1;cin>>t;
 while(t--)
 {
     ll n;cin>>n;
